@@ -43,7 +43,7 @@ class Post(Base):
     __tablename__ = "post"
     id = Column(Integer, primary_key=True)
     user_id = Column(Integer, ForeignKey("user.id"))
-    comments_id = Column(String, ForeignKey("comments.id"))
+    comments_id = Column(String(100), ForeignKey("comments.id"))
 
 class Comments(Base):
     __tablename__ = "comments"
